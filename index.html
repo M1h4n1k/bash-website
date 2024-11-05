@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <script type="module" src="./index.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favi.svg">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: monospace;
+            font-size: x-large;
+            color: white;
+            background-color: black;
+            cursor: default;
+            display: flex;
+            flex-direction: column-reverse;
+            max-height: calc(100vh - 4rem);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        ::selection {
+            background-color: rgb(161, 161, 161);
+        }
+
+        @keyframes blink {
+            49% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            display: inline-block;
+            white-space: pre-wrap;
+        }
+
+        #cursor {
+            animation: blink 1s infinite;
+            width: 0;
+            display: inline-block;
+            transform: translateX(-5.5px);
+        }
+
+        .path {
+            color: rgb(79, 120, 255);
+        }
+        
+        .user {
+            color: rgb(0, 226, 0);
+        }
+
+        #input {
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-family: monospace;
+            font-size: x-large;
+            outline: none;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="intro">
+            <div>
+                Welcome to my bash-like portfolio
+                <br><br>Available commands:
+                <br>&emsp;&emsp;&emsp;&emsp;cat [file] - output the contents of a file
+                <br>&emsp;&emsp;&emsp;&emsp;cd [path] - change the current directory
+                <br>&emsp;&emsp;&emsp;&emsp;clear - clear the console
+                <br>&emsp;&emsp;&emsp;&emsp;help - display this help text
+                <br>&emsp;&emsp;&emsp;&emsp;ls [path] - list directory contents
+                <br>&emsp;&emsp;&emsp;&emsp;pwd - print the current working directory
+                <br>&emsp;&emsp;&emsp;&emsp;whoami - print the current user
+            </div>
+            <br>
+        </div>
+        <div id="history">
+            
+        </div>
+        <span class="user">guest@mk</span>:<span id="path" class="path">/</span>$&nbsp;<input autofocus id="input">
+    </div>
+</body>
+</html>
