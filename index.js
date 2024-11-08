@@ -32,6 +32,7 @@ const updateDisplayWithNewHistory = () => {
       }</span>$ ${h[0]}${h[1] !== "" ? "<br>" : ""}${formattedOutput}</span>`;
     })
     .join("<br>");
+  window.scrollTo(0, document.body.scrollHeight);
 };
 
 document.addEventListener("keydown", () => {
